@@ -7,7 +7,7 @@ import Stepper, { Step } from './Stepper';
 
 
 function NavBar() {
-  const links = ['tee house', 'about', 'experience', 'contact'];
+  const links = ['tee house', 'about', 'experience', 'projects', 'contact'];
   const [active, setActive] = useState(0);
   const navRef = useRef(null);
   const lineRef = useRef(null);
@@ -154,36 +154,36 @@ function AboutExplorer(){
   nextButtonText="Next"
 > 
   <Step>
-    <h2>Who Am I?</h2>
+    <h2 className = "about-title">Who Am I?</h2>
     <p>A passionate, curious, and determined programmer eager to learn and build innovative solutions in software engineering and machine learning. I develop full-stack projects that integrate thoughtful front-end design with efficient back-end systems. My knowledge surrounding machine learning architectures are applied to automate and solve real-world problems.</p>
   </Step>
   <Step>
-    <h2>Education</h2>
+    <h2 className = "about-title">Education</h2>
     <p>I'm majoring in <b> Computer Science</b> and <b> Cognitive Science</b> at University of California, Berkeley, with an expected graduation date of May 2028!</p>
   </Step>
   <Step>
-    <h2>Technical Strengths</h2>
+    <h2 className = "about-title">Technical Strengths</h2>
     <p>Coding Languages: Python, HTML, CSS, Java, JavaScript <br></br>
     Libraries: pandas, numpy, matplotlib, PyTorch, Scikit-learn, React<br></br>
     Languages: English, Mandarin, Spanish, Korean </p>
   </Step>
   <Step>
-    <h2>Coursework</h2>
+    <h2 className = "about-title">Coursework</h2>
     <p>Some core technical classes I have completed / am currently taking include:</p>
-    <ul style = {{textAlign: 'left'}}>
-    <li>CS61A - The Structure and Interpretation of Computer Programs</li>
-    <li>CS70 - Discrete Mathematics & Probability Theory</li>
-    <li>CS61B - Data Structures and Algorithms</li>
-    <li>EECS16A - Foundations of Signals, Dynamical Systems, and Information Processing</li>
-    <li>Math 54 - Linear Algebra & Differential Equations</li>
-    <li>Math 53 - Multivariable Calculus</li>
-    <li>Stat 20 - Introduction to Probability & Statistics</li>
-    <li>CISD 307 - Introduction to Artificial Intelligence and Machine Learning</li>
+    <ul style = {{textAlign: 'left' }}>
+    <li><b>CS61A </b>- The Structure and Interpretation of Computer Programs</li>
+    <li><b>CS70 </b>- Discrete Mathematics & Probability Theory</li>
+    <li><b>CS61B </b>- Data Structures and Algorithms</li>
+    <li><b>EECS16A </b>- Foundations of Signals, Dynamical Systems, and Information Processing</li>
+    <li><b>Math 54 </b>- Linear Algebra & Differential Equations</li>
+    <li><b>Math 53 </b>- Multivariable Calculus</li>
+    <li><b>Stat 20 </b>- Introduction to Probability & Statistics</li>
+    <li><b>CISD 307 </b>- Introduction to Artificial Intelligence and Machine Learning</li>
     </ul>
   </Step>
   <Step>
-    <h2>Wanna know more?</h2>
-    <p>Find out more about my projects below!  </p>
+    <h2 className = "about-title">Wanna know more?</h2>
+    <p>Find out more about my projects below!</p>
   </Step>
 </Stepper>
   )
@@ -272,7 +272,7 @@ function Experience() {
       ],
     },
   ];
-
+  {/*
   const projects = [
     { name: "Architectural Style Classification Website", desc: "Developed a full-stack web application integrating a deep learning model trained on labeled datasets to classify architectural styles from user-uploaded images", tags: ["DL", "Python", "JavaScript", "HTML"] },
     { name: "SSP Astrophysics Orbit Determination Program", desc: "Built a Python program to compute asteroid 1951 LB’s orbit from observational data, and further predicting its potential celestial collisions in the future.", tags: ["Python"]},
@@ -280,6 +280,52 @@ function Experience() {
     { name: "Minesweeper", desc: "Recreated the classic Minesweeper game with a modern, minimalistic interface.", tags: ["Python"] },
     { name: "Wordle Unlimited + AI Solver", desc: "Engineered a Wordle Unlimited clone with an AI solver achieving 99% accuracy, validated through large-scale simulations.", tags: ["Python"] },
   ];
+*/}
+const projects = [
+  {
+    name: "Tweets’ Sentiment Classification",
+    desc: "Built a sentiment classification pipeline using GloVe embeddings and a Multilayer Perceptron to predict tweet polarity with PyTorch and Scikit-learn.",
+    tags: ["PyTorch", "Scikit-learn", "NLP", "ML"],
+  },
+  {
+    name: "SpeakEasy",
+    desc: "Developed a real-time crowd sentiment and attention analysis tool integrating OpenFace for facial emotion tracking, Fish Audio for tone detection, and Claude for natural language insights — full-stack implementation with Python, React, and JavaScript.",
+    tags: ["Python", "React", "OpenFace", "Claude", "Fish Audio"],
+  },
+  {
+    name: "CIFAR10 Classifier",
+    desc: "Implemented image classifiers using AlexNet and ResNet18 architectures to evaluate deep learning performance on the CIFAR-10 dataset.",
+    tags: ["PyTorch", "DL", "CNN", "ResNet18", "AlexNet"],
+  },
+  {
+    name: "Architectural Style Classification Website",
+    desc: "Developed a full-stack web application integrating a ResNet50 deep learning model to classify architectural styles from user-uploaded images.",
+    tags: ["ResNet50", "Python", "JavaScript", "HTML", "CSS"],
+  },
+  {
+    name: "Camel Up (AI Hint System)",
+    desc: "Implemented Camel Up board game logic with an AI-powered hint feature that suggests optimal strategies using probabilistic reasoning.",
+    tags: ["Python", "Game AI"],
+  },
+  {
+    name: "Wordle Unlimited + Solver",
+    desc: "Created a Wordle Unlimited clone with an AI solver achieving 99% accuracy through frequency and entropy-based heuristics.",
+    tags: ["Python", "Algorithm Design", "Game AI"],
+  },
+  {
+    name: "Minesweeper",
+    desc: "Recreated the classic Minesweeper game with a minimalistic interface and intelligent auto-solver.",
+    tags: ["Python", "Game Design"],
+  },
+  {
+    name: "Personal Website",
+    desc: "Designed and built a responsive personal portfolio website to showcase projects, experiences, and contact information using React.js.",
+    tags: ["React.js", "HTML", "CSS", "JavaScript"],
+  },
+  { name: "SSP Astrophysics Orbit Determination Program", desc: "Built a Python program to compute asteroid 1951 LB’s orbit from observational data, and further predicting its potential celestial collisions in the future.", tags: ["Python"]},
+
+];
+
 
   // --- Scroll reveal & smoothed 3D tilt ---
   const cardRefs = useRef([]);
@@ -345,10 +391,11 @@ function Experience() {
 
   return (
     <section id="experience" className="exp-section">
-      <h2>Experience</h2>
-      <p className="skills-line">
-        Programming Languages: HTML, CSS, Java, Python, JavaScript
-      </p>
+      <SplitText
+        text="Experience"
+        tag="h2"
+        className="text-2xl font-semibold text-center my-0"
+      />
 
       <div className="timeline">
         {experiences.map((e, i) => (
@@ -374,7 +421,7 @@ function Experience() {
         ))}
       </div>
 
-      <h2 className="projects-title">Projects</h2>
+      <h2 id = "projects" className="projects-title">Projects</h2>
       <div className="projects-grid">
         {projects.map((p, i) => (
           <div
@@ -400,6 +447,7 @@ function Experience() {
                 </span>
               ))}
             </div>
+
           </div>
         ))}
       </div>

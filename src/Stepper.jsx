@@ -57,7 +57,7 @@ export default function Stepper({
 
   return (
     <div className="outer-container" {...rest}>
-      <div className={`step-circle-container ${stepCircleContainerClassName}`} style={{ border: '1px solid #222' }}>
+      <div className={`step-circle-container ${stepCircleContainerClassName}`} style={{ border: '1.5px solid rgba(255, 255, 255, 0.45)' }}>
         <div className={`step-indicator-row ${stepContainerClassName}`}>
           {stepsArray.map((_, index) => {
             const stepNumber = index + 1;
@@ -168,7 +168,7 @@ function SlideTransition({ children, direction, onHeightReady }) {
 
 const stepVariants = {
   enter: dir => ({
-    x: dir >= 0 ? '-100%' : '100%',
+    x: dir >= 0 ? '100%' : '-100%',
     opacity: 0
   }),
   center: {
@@ -176,7 +176,7 @@ const stepVariants = {
     opacity: 1
   },
   exit: dir => ({
-    x: dir >= 0 ? '50%' : '-50%',
+    x: dir >= 0 ? '-50%' : '50%',
     opacity: 0
   })
 };
@@ -196,9 +196,9 @@ function StepIndicator({ step, currentStep, onClickStep, disableStepIndicators }
     <motion.div onClick={handleClick} className="step-indicator" animate={status} initial={false}>
       <motion.div
         variants={{
-          inactive: { scale: 1, backgroundColor: '#222', color: '#9e89c7' },
-          active: { scale: 1, backgroundColor: '#9e89c7', color: '#9e89c7' },
-          complete: { scale: 1, backgroundColor: '#9e89c7', color: '#3b82f6' }
+            inactive: { scale: 1, backgroundColor: '#9e89c7', color: '#ffffff' },
+            active: { scale: 1, backgroundColor: '#644b83', color: '#ffffff' },
+            complete: { scale: 1, backgroundColor: '#9e89c7', color: '#ffffff' }
         }}
         transition={{ duration: 0.3 }}
         className="step-indicator-inner"

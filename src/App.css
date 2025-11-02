@@ -198,6 +198,8 @@ nav ul li a {
 .exp-section h2 {
   text-align: left;
   margin: 0 0 24px 0;
+  font-size:3rem;
+
 }
 
 .timeline {
@@ -276,7 +278,7 @@ nav ul li a {
 
 /* --- Projects --- */
 .projects-title {
-  margin-top: 56px;
+  margin-top: 200px;
 }
 
 .projects-grid {
@@ -343,6 +345,7 @@ nav ul li a {
 
 /* (2) title-only description reveal (animated) */
 .project-card .muted {
+  font-size:1rem;
   color: #666;
   margin: 0 0 10px 0;
   max-height: 0;
@@ -443,4 +446,57 @@ nav ul li a {
 
 p {
   font-size: 1.3rem;
+  color: #3b3341;
+}
+li{
+  color: #3b3341;
+}
+
+.about-title{
+  color:#000000;
+}
+#projects {
+  padding-top: 50px;     /* adds a big gap above */
+  padding-bottom: 50px;  /* adds a big gap below */
+}
+
+/* --- Project Buttons --- */
+.project-links {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* Glassy purple buttons */
+.project-btn {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #9e89c7;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(158, 137, 199, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover glow */
+.project-btn:hover {
+  background: rgba(158, 137, 199, 0.8);
+  color: #fff;
+  border-color: rgba(158, 137, 199, 0.8);
+  box-shadow: 0 4px 16px rgba(158, 137, 199, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Active press */
+.project-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(158, 137, 199, 0.2);
 }
