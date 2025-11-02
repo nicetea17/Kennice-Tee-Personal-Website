@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import PhotoHover from "./PhotoHover";
+import LiquidEther from './LiquidEther';
 
 function NavBar() {
   const links = ['tee house', 'about', 'experience', 'contact'];
@@ -128,6 +129,8 @@ function TypewriterRotator() {
   }, [charIndex, deleting, phraseIndex]);
 
   return (
+          
+
     <h1 className="typewriter-text">
       <span className="large"> Kennice Tee. </span>
       <br />
@@ -356,10 +359,52 @@ function Contact() {
 function App() {
   return (
     <div>
+      <div
+        className="liquid-nav-wrapper"
+        style={{
+          position: "relative",
+          width: "100vw",
+          overflow: "hidden",
+          zIndex: 1,
+          
+        }}
+      >
+        <LiquidEther
+          style={{
+            position: "absolute",
+            inset: 0,
+            zIndex: 0,
+            opacity: 0.6,
+            backgroundColor: '#f9f7ff' 
+          }}
+        />
+        <div style={{ position: "relative", zIndex: 1 }}>
       <NavBar />
+      </div>
+      </div>
       {/* Front page */}
-      <div className="app-container" id="tee-house">
+      <div className="app-container" id="tee-house" style={{
+    position: 'relative',overflow: "hidden", }}>
+      <LiquidEther
+        style={{
+          position: "absolute",
+          top: 0,
+          left: "50%",
+          transform: "translateX(-50%)", 
+          width: "100vw",                        
+          zIndex: 0,     
+          opacity: 0.6,  
+          backgroundColor: '#f9f7ff'             
+        }}
+      />
+      <div
+    style={{
+      position: 'relative',
+      zIndex: 1,  
+    }}
+  >
         <TypewriterRotator />
+      </div>
       </div>
 
       {/* Next section starts after scrolling */}
