@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import PhotoHover from "./PhotoHover";
 import LiquidEther from './LiquidEther';
+import SplitText from "./SplitText";
+import Stepper, { Step } from './Stepper';
+
 
 function NavBar() {
   const links = ['tee house', 'about', 'experience', 'contact'];
@@ -140,6 +143,53 @@ function TypewriterRotator() {
   );
 }
 
+function AboutExplorer(){
+  return(<Stepper
+  initialStep={1}
+  onStepChange={(step) => {
+    console.log(step);
+  }}
+  onFinalStepCompleted={() => console.log("All steps completed!")}
+  backButtonText="Previous"
+  nextButtonText="Next"
+> 
+  <Step>
+    <h2>Who Am I?</h2>
+    <p>A passionate, curious, and determined programmer eager to learn and build innovative solutions in software engineering and machine learning. I develop full-stack projects that integrate thoughtful front-end design with efficient back-end systems. My knowledge surrounding machine learning architectures are applied to automate and solve real-world problems.</p>
+  </Step>
+  <Step>
+    <h2>Education</h2>
+    <p>I'm majoring in <b> Computer Science</b> and <b> Cognitive Science</b> at University of California, Berkeley, with an expected graduation date of May 2028!</p>
+  </Step>
+  <Step>
+    <h2>Technical Strengths</h2>
+    <p>Coding Languages: Python, HTML, CSS, Java, JavaScript <br></br>
+    Libraries: pandas, numpy, matplotlib, PyTorch, Scikit-learn, React<br></br>
+    Languages: English, Mandarin, Spanish, Korean </p>
+  </Step>
+  <Step>
+    <h2>Coursework</h2>
+    <p>Some core technical classes I have completed / am currently taking include:</p>
+    <ul style = {{textAlign: 'left'}}>
+    <li>CS61A - The Structure and Interpretation of Computer Programs</li>
+    <li>CS70 - Discrete Mathematics & Probability Theory</li>
+    <li>CS61B - Data Structures and Algorithms</li>
+    <li>EECS16A - Foundations of Signals, Dynamical Systems, and Information Processing</li>
+    <li>Math 54 - Linear Algebra & Differential Equations</li>
+    <li>Math 53 - Multivariable Calculus</li>
+    <li>Stat 20 - Introduction to Probability & Statistics</li>
+    <li>CISD 307 - Introduction to Artificial Intelligence and Machine Learning</li>
+    </ul>
+  </Step>
+  <Step>
+    <h2>Wanna know more?</h2>
+    <p>Find out more about my projects below!  </p>
+  </Step>
+</Stepper>
+  )
+}
+
+
 function AboutSection() {
   const myImages = [
     "Untitled design.JPG",
@@ -147,13 +197,28 @@ function AboutSection() {
     "IMG_0886 2.JPG",
     "IMG_3842.JPG"
   ];
+  const handleAnimationComplete = () => {
+    console.log('All letters have animated!');
+  };
+  
 
   return (
     <section id="about" className="about-section">
-      <h2>About Me</h2>
+      <AboutExplorer />
+
+
+
+      {/*
+      <SplitText
+      text="About Me"
+      className="text-2xl font-semibold text-center my-0"
+      onLetterAnimationComplete={handleAnimationComplete}
+      tag = "h2"
+    />
       <p>
         I’m Kennice Tee, a freshman at UC Berkeley majoring in Computer Science (CDSS) and Cognitive Science.
       </p>
+      
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
         {myImages.map((src, index) => (
           <img
@@ -165,6 +230,7 @@ function AboutSection() {
           />
         ))}
       </div>
+      */}
     </section>
   );
 }
