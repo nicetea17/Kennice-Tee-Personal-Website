@@ -458,6 +458,9 @@ const projects = [
         tag="h2"
         className="text-2xl font-semibold text-center my-0"
       /></h2>
+      Visit my <a href="https://github.com/nicetea17" target="_blank" rel="noreferrer" className="project-link">
+                GitHub Page (nicetea17)
+              </a> to view these projects
       <div className="projects-grid">
         {projects.map((p, i) => (
           <div
@@ -469,7 +472,6 @@ const projects = [
             onMouseLeave={resetTilt}
           >
             <h3>{p.name}</h3>
-            {/* Description reveals on title hover (CSS handles it) */}
             <p className="muted">{p.desc}</p>
 
             <div className="tag-row">
