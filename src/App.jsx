@@ -7,7 +7,7 @@ import Stepper, { Step } from './Stepper';
 import Achievements from "./Achievements";
 
 function NavBar() {
-  const links = ['tee house', 'about', 'experience', 'projects', 'contact'];
+  const links = ['tee house', 'about', 'experience', 'projects', 'achievements', 'contact'];
   const [active, setActive] = useState(0);
   const navRef = useRef(null);
   const lineRef = useRef(null);
@@ -166,8 +166,8 @@ function AboutExplorer(){
     <p>A passionate, curious, and determined programmer eager to learn and build innovative solutions in software engineering and machine learning. 
       I develop full-stack projects that integrate thoughtful front-end design with efficient back-end systems. 
       My knowledge surrounding machine learning architectures are applied to automate and solve real-world problems.
-      <br></br>
-      Learn More about my Education (2), Technical Strengths (3), Coursework (4), and Achievements (5) here!
+      <hr></hr>
+      Learn More about my Education (2), Technical Strengths (3), and Coursework (4) here!
       </p>
   </Step>
   <Step>
@@ -176,8 +176,8 @@ function AboutExplorer(){
   </Step>
   <Step>
     <h2 className = "about-title">Technical Strengths</h2>
-    <p>Coding Languages: Python, HTML, CSS, Java, JavaScript <br></br>
-    Libraries: pandas, numpy, matplotlib, PyTorch, Scikit-learn, React<br></br>
+    <p>Coding Languages: Python, HTML, CSS, Java, JavaScript <br></br> <hr></hr>
+    Libraries: pandas, numpy, matplotlib, PyTorch, Scikit-learn, React<br></br> <hr></hr>
     Languages: English, Mandarin, Spanish, Korean </p>
   </Step>
   <Step>
@@ -434,7 +434,12 @@ const projects = [
         ))}
       </div>
 
-      <h2 id = "projects" className="projects-title">Projects</h2>
+      <h2 id = "projects" className="projects-title">
+        <SplitText
+        text="Projects"
+        tag="h2"
+        className="text-2xl font-semibold text-center my-0"
+      /></h2>
       <div className="projects-grid">
         {projects.map((p, i) => (
           <div

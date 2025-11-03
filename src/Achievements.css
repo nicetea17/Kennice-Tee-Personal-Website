@@ -1,14 +1,12 @@
-/* --- Section Layout --- */
 .achievements-section {
     width: 100%;
-    padding: 160px 20px;
+    padding: 70px 20px 160px;
     background: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-  /* --- Two-column layout --- */
   .achievements-columns {
     display: flex;
     flex-wrap: wrap;
@@ -26,7 +24,7 @@
   }
   
   .column h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #000;
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
@@ -34,7 +32,6 @@
     text-align: left;
   }
   
-  /* --- Card Grid --- */
   .achievements-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -42,7 +39,6 @@
     width: 100%;
   }
   
-  /* --- Individual cards --- */
   .ach-card {
     width: 100%;
     background: linear-gradient(
@@ -62,7 +58,6 @@
     box-shadow: 0 12px 28px rgba(158, 137, 199, 0.2);
   }
   
-  /* --- Title line with date and bar --- */
   .ach-card-top h4 {
     color: #111;
     font-size: 1.1rem;
@@ -78,7 +73,6 @@
     font-weight: normal;
   }
   
-  /* --- Description --- */
   .ach-card p {
     color: #3b3341;
     font-size: 0.95rem;
@@ -86,7 +80,6 @@
     margin-top: 4px;
   }
   
-  /* --- Responsive --- */
   @media (max-width: 800px) {
     .achievements-columns {
       flex-direction: column;
@@ -99,7 +92,7 @@
     }
   
     .ach-card-top h4 {
-      white-space: normal; /* allow wrapping on smaller screens */
+      white-space: normal; 
     }
   }
   

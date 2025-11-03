@@ -93,7 +93,6 @@ nav ul li.active {
   color: #9e89c7;
 }
 
-/* Mobile adjustments */
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
@@ -107,14 +106,17 @@ nav.nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.007); 
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   padding: 12px 0;
   z-index: 1000;
 }
 
+
 .nav-container {
   width: 100%;
-  padding: 0 20px; /* keep navbar padding */
+  padding: 0 20px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -143,7 +145,7 @@ nav ul li a {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 14px;
+  font-size: 0.87rem;
 }
 
 /* Full height intro */
@@ -173,7 +175,7 @@ nav ul li a {
 }
 
 .about-section h2 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin: 0px 0px;
 }
 
@@ -198,7 +200,7 @@ nav ul li a {
 .exp-section h2 {
   text-align: left;
   margin: 0 0 24px 0;
-  font-size:3rem;
+  font-size:2.5rem;
 
 }
 
@@ -250,7 +252,7 @@ nav ul li a {
 
 .card h3 {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
 }
 
 .dates {
@@ -325,6 +327,7 @@ nav ul li a {
   margin: 0 0 4px 0;
   position: relative;
   display: inline-block;
+  font-size: 1.22rem;
 }
 .project-card h3::after {
   content: "";
@@ -345,7 +348,7 @@ nav ul li a {
 
 /* (2) title-only description reveal (animated) */
 .project-card .muted {
-  font-size:1rem;
+  font-size:1.1rem;
   color: #666;
   margin: 0 0 10px 0;
   max-height: 0;
@@ -405,12 +408,12 @@ nav ul li a {
 }
 
 .contact-section h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 16px;
 }
 
 .contact-section p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-bottom: 24px;
 }
 
@@ -456,11 +459,10 @@ li{
   color:#000000;
 }
 #projects {
-  padding-top: 50px;     /* adds a big gap above */
-  padding-bottom: 50px;  /* adds a big gap below */
+  padding-top: 50px;  
+  padding-bottom: 0px; 
 }
 
-/* --- Project Buttons --- */
 .project-links {
   margin-top: 14px;
   display: flex;
@@ -468,7 +470,6 @@ li{
   gap: 14px;
 }
 
-/* Glassy purple buttons */
 .project-btn {
   display: inline-block;
   font-size: 0.9rem;
@@ -486,7 +487,6 @@ li{
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Hover glow */
 .project-btn:hover {
   background: rgba(158, 137, 199, 0.8);
   color: #fff;
@@ -495,8 +495,18 @@ li{
   transform: translateY(-1px);
 }
 
-/* Active press */
 .project-btn:active {
   transform: translateY(1px);
   box-shadow: 0 2px 8px rgba(158, 137, 199, 0.2);
+}
+
+hr {
+  background-color: #9e89c7;
+  border:none;
+  height:1px;
+  width: 40%;
+}
+
+#about {
+  scroll-margin-top: -80px;
 }
