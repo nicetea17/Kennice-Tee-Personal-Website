@@ -1,0 +1,105 @@
+/* --- Section Layout --- */
+.achievements-section {
+    width: 100%;
+    padding: 160px 20px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* --- Two-column layout --- */
+  .achievements-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+    max-width: 1100px;
+  }
+  
+  .column {
+    flex: 1 1 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .column h3 {
+    font-size: 2rem;
+    color: #000;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+  
+  /* --- Card Grid --- */
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    width: 100%;
+  }
+  
+  /* --- Individual cards --- */
+  .ach-card {
+    width: 100%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(158, 137, 199, 0.12),
+      rgba(255, 255, 255, 0.65)
+    );
+    border-radius: 16px;
+    padding: 20px 22px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(8px);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .ach-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(158, 137, 199, 0.2);
+  }
+  
+  /* --- Title line with date and bar --- */
+  .ach-card-top h4 {
+    color: #111;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  .divider {
+    margin: 0 6px;
+    color: #7c7c7c;
+    font-weight: normal;
+  }
+  
+  /* --- Description --- */
+  .ach-card p {
+    color: #3b3341;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 4px;
+  }
+  
+  /* --- Responsive --- */
+  @media (max-width: 800px) {
+    .achievements-columns {
+      flex-direction: column;
+      gap: 80px;
+    }
+  
+    .column h3 {
+      text-align: center;
+      width: 100%;
+    }
+  
+    .ach-card-top h4 {
+      white-space: normal; /* allow wrapping on smaller screens */
+    }
+  }
+  

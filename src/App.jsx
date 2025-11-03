@@ -4,7 +4,7 @@ import PhotoHover from "./PhotoHover";
 import LiquidEther from './LiquidEther';
 import SplitText from "./SplitText";
 import Stepper, { Step } from './Stepper';
-
+import Achievements from "./Achievements";
 
 function NavBar() {
   const links = ['tee house', 'about', 'experience', 'projects', 'contact'];
@@ -144,18 +144,31 @@ function TypewriterRotator() {
 }
 
 function AboutExplorer(){
+  const [currentStep, setCurrentStep] = useState(1);
+
+  const nextLabels = [
+    "About My Education! →",
+    "Technical Strengths! →",
+    "Show Coursework →",
+    "Learn More →",
+    "Done"
+  ];
+
   return(<Stepper
   initialStep={1}
-  onStepChange={(step) => {
-    console.log(step);
-  }}
+  onStepChange={(step) => setCurrentStep(step)}
   onFinalStepCompleted={() => console.log("All steps completed!")}
   backButtonText="Previous"
-  nextButtonText="Next"
+  nextButtonText={nextLabels[currentStep - 1] || "Next"}
 > 
   <Step>
     <h2 className = "about-title">Who Am I?</h2>
-    <p>A passionate, curious, and determined programmer eager to learn and build innovative solutions in software engineering and machine learning. I develop full-stack projects that integrate thoughtful front-end design with efficient back-end systems. My knowledge surrounding machine learning architectures are applied to automate and solve real-world problems.</p>
+    <p>A passionate, curious, and determined programmer eager to learn and build innovative solutions in software engineering and machine learning. 
+      I develop full-stack projects that integrate thoughtful front-end design with efficient back-end systems. 
+      My knowledge surrounding machine learning architectures are applied to automate and solve real-world problems.
+      <br></br>
+      Learn More about my Education (2), Technical Strengths (3), Coursework (4), and Achievements (5) here!
+      </p>
   </Step>
   <Step>
     <h2 className = "about-title">Education</h2>
@@ -182,8 +195,8 @@ function AboutExplorer(){
     </ul>
   </Step>
   <Step>
-    <h2 className = "about-title">Wanna know more?</h2>
-    <p>Find out more about my projects below!</p>
+    <h2 className = "about-title">Wanna Know More?</h2>
+    <p>Find out more about my Experience, Projects, Activities, and Awards below!</p>
   </Step>
 </Stepper>
   )
@@ -524,6 +537,7 @@ function App() {
       {/* Next section starts after scrolling */}
       <AboutSection />
       <Experience />
+      <Achievements />
       <Contact />
     </div>
   );
