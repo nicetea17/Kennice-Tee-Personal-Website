@@ -361,9 +361,8 @@ nav ul li a {
     max-height 260ms ease;
 }
 
-/* reveal only when hovering the title */
-.project-card h3:hover + .muted {
-  max-height: 200px; /* tweak as needed */
+.project-card:hover .muted {
+  max-height: 200px;
   opacity: 1;
   transform: translateY(0);
 }
@@ -464,10 +463,25 @@ li{
 }
 
 .project-links {
-  margin-top: 14px;
+  margin-top: 10px;
   display: flex;
-  justify-content: center;
-  gap: 14px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #9e89c7;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-bottom: 1px solid rgba(158,137,199,0.3);
+  transition: all 0.25s ease;
+}
+
+.project-link:hover {
+  color: #644b83;
+  border-bottom-color: #9e89c7;
 }
 
 .project-btn {

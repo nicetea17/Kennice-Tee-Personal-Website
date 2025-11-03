@@ -299,43 +299,57 @@ const projects = [
     name: "Tweets’ Sentiment Classification",
     desc: "Built a sentiment classification pipeline using GloVe embeddings and a Multilayer Perceptron to predict tweet polarity with PyTorch and Scikit-learn.",
     tags: ["PyTorch", "Scikit-learn", "NLP", "ML"],
+    github: "https://github.com/nicetea17/Tweets-Sentiment-Classifier",
+    
   },
   {
     name: "SpeakEasy",
-    desc: "Developed a real-time crowd sentiment and attention analysis tool integrating OpenFace for facial emotion tracking, Fish Audio for tone detection, and Claude for natural language insights — full-stack implementation with Python, React, and JavaScript.",
+    desc: "Developed a real-time crowd sentiment and attention analysis tool integrating OpenFace for facial emotion tracking, Fish Audio for tone detection, and Claude for natural language insights.",
     tags: ["Python", "React", "OpenFace", "Claude", "Fish Audio"],
+    github: "https://github.com/alonr619/SpeakEasy",
   },
   {
     name: "CIFAR10 Classifier",
     desc: "Implemented image classifiers using AlexNet and ResNet18 architectures to evaluate deep learning performance on the CIFAR-10 dataset.",
     tags: ["PyTorch", "DL", "CNN", "ResNet18", "AlexNet"],
+    github: "https://github.com/nicetea17/CIFAR10-Classifier-AlexNet-and-Resnet18"
   },
   {
     name: "Architectural Style Classification Website",
     desc: "Developed a full-stack web application integrating a ResNet50 deep learning model to classify architectural styles from user-uploaded images.",
     tags: ["ResNet50", "Python", "JavaScript", "HTML", "CSS"],
+    github: "https://github.com/nicetea17/Architectural-Style-Classification",
   },
   {
     name: "Camel Up (AI Hint System)",
     desc: "Implemented Camel Up board game logic with an AI-powered hint feature that suggests optimal strategies using probabilistic reasoning.",
     tags: ["Python", "Game AI"],
+    github: "https://github.com/nicetea17/Camel-Up-w-AI-advice-feature",
   },
   {
     name: "Wordle Unlimited + Solver",
     desc: "Created a Wordle Unlimited clone with an AI solver achieving 99% accuracy through frequency and entropy-based heuristics.",
     tags: ["Python", "Algorithm Design", "Game AI"],
+    github: "https://github.com/nicetea17/Wordle-Unlimited",
   },
   {
     name: "Minesweeper",
     desc: "Recreated the classic Minesweeper game with a minimalistic interface and intelligent auto-solver.",
     tags: ["Python", "Game Design"],
+    github: "https://github.com/nicetea17/-Ken-Nice-Minesweeper",
   },
   {
     name: "Personal Website",
     desc: "Designed and built a responsive personal portfolio website to showcase projects, experiences, and contact information using React.js.",
     tags: ["React.js", "HTML", "CSS", "JavaScript"],
+    github: "https://github.com/nicetea17/Kennice-Tee-Personal-Website",
+    demo: "https://kennicetee.vercel.app"
   },
-  { name: "SSP Astrophysics Orbit Determination Program", desc: "Built a Python program to compute asteroid 1951 LB’s orbit from observational data, and further predicting its potential celestial collisions in the future.", tags: ["Python"]},
+  { name: "SSP Astrophysics Orbit Determination Program", 
+  desc: "Built a Python program to compute asteroid 1951 LB’s orbit from observational data, and further predicting its potential celestial collisions in the future.", 
+  tags: ["Python", "Research"],
+
+},
 
 ];
 
@@ -465,6 +479,18 @@ const projects = [
                 </span>
               ))}
             </div>
+            <div className="project-links">
+            {p.github && (
+              <a href={p.github} target="_blank" rel="noreferrer" className="project-link">
+                GitHub
+              </a>
+            )}
+            {p.demo && (
+              <a href={p.demo} target="_blank" rel="noreferrer" className="project-link">
+                Demo
+              </a>
+            )}
+          </div>
 
           </div>
         ))}
