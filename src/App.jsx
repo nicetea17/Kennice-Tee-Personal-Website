@@ -307,6 +307,7 @@ const projects = [
     desc: "Developed a real-time crowd sentiment and attention analysis tool integrating OpenFace for facial emotion tracking, Fish Audio for tone detection, and Claude for natural language insights.",
     tags: ["Python", "React", "OpenFace", "Claude", "Fish Audio"],
     github: "https://github.com/alonr619/SpeakEasy",
+    demo: "https://youtu.be/C3BJl4_AoKY?si=5x4SB2VMa4ELI3iC"
   },
   {
     name: "CIFAR10 Classifier",
@@ -319,6 +320,7 @@ const projects = [
     desc: "Developed a full-stack web application integrating a ResNet50 deep learning model to classify architectural styles from user-uploaded images.",
     tags: ["ResNet50", "Python", "JavaScript", "HTML", "CSS"],
     github: "https://github.com/nicetea17/Architectural-Style-Classification",
+    demo: "https://classify-architectural-style-kt.onrender.com/"
   },
   {
     name: "Camel Up (AI Hint System)",
@@ -345,9 +347,11 @@ const projects = [
     github: "https://github.com/nicetea17/Kennice-Tee-Personal-Website",
     demo: "https://kennicetee.vercel.app"
   },
-  { name: "SSP Astrophysics Orbit Determination Program", 
+  { name: "AnaGame", 
   desc: "Built a Python program to compute asteroid 1951 LB’s orbit from observational data, and further predicting its potential celestial collisions in the future.", 
   tags: ["Python", "Research"],
+  github: "https://github.com/nicetea17/Anagame",
+  demo: "https://anagame.streamlit.app/"
 
 },
 
