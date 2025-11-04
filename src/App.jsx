@@ -300,6 +300,7 @@ const projects = [
     desc: "Built a sentiment classification pipeline using GloVe embeddings and a Multilayer Perceptron to predict tweet polarity with PyTorch and Scikit-learn.",
     tags: ["PyTorch", "Scikit-learn", "NLP", "ML"],
     github: "https://github.com/nicetea17/Tweets-Sentiment-Classifier",
+    demo: "https://tweets-sentiment-classifier.vercel.app/"
     
   },
   {
@@ -349,7 +350,7 @@ const projects = [
   },
   { name: "AnaGame", 
   desc: "Built a Python program to compute asteroid 1951 LB’s orbit from observational data, and further predicting its potential celestial collisions in the future.", 
-  tags: ["Python", "Research"],
+  tags: ["Python"],
   github: "https://github.com/nicetea17/Anagame",
   demo: "https://anagame.streamlit.app/"
 
