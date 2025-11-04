@@ -315,7 +315,7 @@ const projects = [
     desc: "Implemented image classifiers using AlexNet and ResNet18 architectures to evaluate deep learning performance on the CIFAR-10 dataset.",
     tags: ["PyTorch", "DL", "CNN", "ResNet18", "AlexNet"],
     github: "https://github.com/nicetea17/CIFAR10-Classifier-AlexNet-and-Resnet18",
-    resultImg: "public/wandb visual with details.png"
+    resultImg: "/wandb visual with details.png"
   },
   {
     name: "Architectural Style Classification Website",
