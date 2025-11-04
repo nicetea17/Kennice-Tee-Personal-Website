@@ -314,7 +314,8 @@ const projects = [
     name: "CIFAR10 Classifier",
     desc: "Implemented image classifiers using AlexNet and ResNet18 architectures to evaluate deep learning performance on the CIFAR-10 dataset.",
     tags: ["PyTorch", "DL", "CNN", "ResNet18", "AlexNet"],
-    github: "https://github.com/nicetea17/CIFAR10-Classifier-AlexNet-and-Resnet18"
+    github: "https://github.com/nicetea17/CIFAR10-Classifier-AlexNet-and-Resnet18",
+    resultImg: "/src/assets/wandb visual with details.png"
   },
   {
     name: "Architectural Style Classification Website",
@@ -475,14 +476,12 @@ const projects = [
             <h3>{p.name}</h3>
             <p className="muted">{p.desc}</p>
 
+            
+
             <div className="tag-row">
-              {p.tags.map((t, k) => (
-                <span
-                  className="tag"
-                  key={k}
-                  style={{ '--tag-delay': `${180 + k * 70}ms` }}
-                >
-                  {t}
+            {p.tags.map((t, k) => (
+            <span className="tag" key={k} style={{ '--tag-delay': `${180 + k * 70}ms` }}>
+              {t}
                 </span>
               ))}
             </div>
@@ -497,6 +496,15 @@ const projects = [
                 Demo
               </a>
             )}
+            {p.name === "CIFAR10 Classifier" && (
+  <div className="hover-container">
+    <span className="show-results">Show Results</span>
+    <img src={p.resultImg} alt="CIFAR-10 Results" className="results-img" />
+  </div>
+)}
+
+
+
           </div>
 
           </div>

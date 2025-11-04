@@ -524,3 +524,73 @@ hr {
 #about {
   scroll-margin-top: -80px;
 }
+
+.hover-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  z-index: 20;
+}
+
+.show-results {
+  color: #9e89c7;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.show-results:hover {
+  color: #6f55a5;
+}
+
+.results-img {
+  position: fixed; /* instead of absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 650px; /* larger preview */
+  max-width: 90vw;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  z-index: 9999; /* sits above everything */
+}
+
+/* Reveal on hover */
+.hover-container:hover .results-img {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.results-img-inline {
+  display: block;
+  width: 70%;              /* smaller, centered image */
+  height: auto;            /* maintain aspect ratio */
+  margin: 12px auto 0;     /* center in card */
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    opacity 0.35s ease,
+    max-height 0.35s ease;
+  pointer-events: none;
+}
+.results-img-inline img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* Reveal image smoothly when hovered */
+.hover-container:hover .results-img-inline,
+.hover-container:has(.results-img-inline:hover) .results-img-inline {
+  opacity: 1;
+  max-height: 220px; /* limits vertical size */
+  pointer-events: auto;
+}
+
