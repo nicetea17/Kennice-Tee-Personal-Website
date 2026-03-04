@@ -24,7 +24,12 @@ export default function Achievements() {
     {
       title: "Machine Learning @ Berkeley",
       date: "2025–Present",
-      desc: "Club Member | Training and refining ML models for collaborative projects.",
+      desc: "Officer | Training and refining ML models for collaborative projects.",
+    },
+    {
+      title: "Dana Street Consulting",
+      date: "2026–Present",
+      desc: "Consultant.",
     },
     {
       title: "Tzu Chi Charity Foundation",

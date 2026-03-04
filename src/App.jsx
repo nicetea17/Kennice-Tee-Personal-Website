@@ -260,12 +260,19 @@ function Experience() {
       link: "https://www.janestreet.com/join-jane-street/programs-and-events/amp/",
     },
     {
-      role: "Student Researcher (Astrophysics)",
-      org: "Summer Science Program",
-      dates: "Jun 2024 – Jul 2024",
+      role: "Machine Learning Consultant",
+      org: "Meta",
+      dates: "Jan 2026 – PRESENT",
       bullets: [
-        "Collected data on asteroid 1951 LB and wrote a Python program to determine its orbit",
-        "Co‑authored a LaTeX research paper with two collaborators",
+        "Partnering with Meta’s machine learning and data teams to enhance Facebook’s customer support chatbot, improving AI-driven inquiry resolution and scaling automated user support workflows.",
+      ]  ,  
+    },
+    {
+      role: "AI Trainer Fellow",
+      org: "Handshake AI",
+      dates: "Dec 2025 – PRESENT",
+      bullets: [
+        "Engineer and evaluate LLM prompts, assessing model outputs for accuracy, bias, fairness, and reasoning quality.",
       ],
     },
     {
@@ -274,6 +281,15 @@ function Experience() {
       dates: "Aug 2024 – June 2025",
       bullets: [
         "Taught Scratch, Python, and Java (1:1 and 1:2) using project‑based methods",
+      ],
+    },
+    {
+      role: "Student Researcher (Astrophysics)",
+      org: "Summer Science Program",
+      dates: "Jun 2024 – Jul 2024",
+      bullets: [
+        "Collected data on asteroid 1951 LB and wrote a Python program to determine its orbit",
+        "Co‑authored a LaTeX research paper with two collaborators",
       ],
     },
     {
@@ -295,6 +311,11 @@ function Experience() {
   ];
 */}
 const projects = [
+  {
+    name: "Reversing Face Distortion Filters",
+    desc: "Built a Pix2Pix-based conditional GAN (U-Net generator + PatchGAN discriminator) to invert synthetic swirl facial distortion filters, exploring filter reversal for digital forensics applications.",
+    tags: ["Python", "Pytorch", "Adversarial Networks"],
+  },
   {
     name: "Tweets’ Sentiment Classification",
     desc: "Built a sentiment classification pipeline using GloVe embeddings and a Multilayer Perceptron to predict tweet polarity with PyTorch and Scikit-learn.",
@@ -336,19 +357,15 @@ const projects = [
     tags: ["Python", "Algorithm Design", "Game AI"],
     github: "https://github.com/nicetea17/Wordle-Unlimited",
   },
+  /*
   {
     name: "Minesweeper",
     desc: "Recreated the classic Minesweeper game with a minimalistic interface and intelligent auto-solver.",
     tags: ["Python", "Game Design"],
     github: "https://github.com/nicetea17/-Ken-Nice-Minesweeper",
   },
-  {
-    name: "Personal Website",
-    desc: "Designed and built a responsive personal portfolio website to showcase projects, experiences, and contact information using React.js.",
-    tags: ["React.js", "HTML", "CSS", "JavaScript"],
-    github: "https://github.com/nicetea17/Kennice-Tee-Personal-Website",
-    demo: "https://kennicetee.vercel.app"
-  },
+  */
+  
   { name: "AnaGame", 
   desc: "Built a Python program to compute asteroid 1951 LB’s orbit from observational data, and further predicting its potential celestial collisions in the future.", 
   tags: ["Python"],
@@ -356,6 +373,13 @@ const projects = [
   demo: "https://anagame.streamlit.app/"
 
 },
+{
+  name: "Personal Website",
+  desc: "Designed and built a responsive personal portfolio website to showcase projects, experiences, and contact information using React.js.",
+  tags: ["React.js", "HTML", "CSS", "JavaScript"],
+  github: "https://github.com/nicetea17/Kennice-Tee-Personal-Website",
+  demo: "https://kennicetee.vercel.app"
+}
 
 ];
 
@@ -521,7 +545,7 @@ function Contact() {
       <p>Let’s connect! Feel free to reach out through any of the following:</p>
       <div className="contact-info">
         <a href="mailto:kennicetee@berkeley.edu"> kennicetee@berkeley.edu</a>
-        <a href="https://www.linkedin.com/in/kennice-tee-820496280" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/kennice-tee" target="_blank" rel="noreferrer">
           LinkedIn
         </a>
       </div>
