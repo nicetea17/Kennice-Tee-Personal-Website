@@ -312,6 +312,13 @@ function Experience() {
 */}
 const projects = [
   {
+    name: "Architectural Style Classification Website",
+    desc: "Developed a full-stack web application integrating a ResNet50 deep learning model to classify architectural styles from user-uploaded images.",
+    tags: ["ResNet50", "Python", "JavaScript", "HTML", "CSS"],
+    github: "https://github.com/nicetea17/Architectural-Style-Classification",
+    demo: "https://classify-architectural-style-kt.onrender.com/"
+  },
+  {
     name: "Reversing Face Distortion Filters",
     desc: "Built a Pix2Pix-based conditional GAN (U-Net generator + PatchGAN discriminator) to invert synthetic swirl facial distortion filters, exploring filter reversal for digital forensics applications.",
     tags: ["Python", "Pytorch", "Adversarial Networks"],
@@ -339,19 +346,20 @@ const projects = [
     github: "https://github.com/nicetea17/CIFAR10-Classifier-AlexNet-and-Resnet18",
     resultImg: "/wandb visual with details.png"
   },
-  {
-    name: "Architectural Style Classification Website",
-    desc: "Developed a full-stack web application integrating a ResNet50 deep learning model to classify architectural styles from user-uploaded images.",
-    tags: ["ResNet50", "Python", "JavaScript", "HTML", "CSS"],
-    github: "https://github.com/nicetea17/Architectural-Style-Classification",
-    demo: "https://classify-architectural-style-kt.onrender.com/"
-  },
+
   {
     name: "Camel Up (AI Hint System)",
     desc: "Implemented Camel Up board game logic with an AI-powered hint feature that suggests optimal strategies using probabilistic reasoning.",
     tags: ["Python", "Game AI"],
     github: "https://github.com/nicetea17/Camel-Up-w-AI-advice-feature",
   },
+  { name: "AnaGame", 
+  desc: "Built a Python program to compute asteroid 1951 LB’s orbit from observational data, and further predicting its potential celestial collisions in the future.", 
+  tags: ["Python"],
+  github: "https://github.com/nicetea17/Anagame",
+  demo: "https://anagame.streamlit.app/"
+
+},
   {
     name: "Wordle Unlimited + Solver",
     desc: "Created a Wordle Unlimited clone with an AI solver achieving 99% accuracy through frequency and entropy-based heuristics.",
@@ -367,13 +375,7 @@ const projects = [
   },
   */
   
-  { name: "AnaGame", 
-  desc: "Built a Python program to compute asteroid 1951 LB’s orbit from observational data, and further predicting its potential celestial collisions in the future.", 
-  tags: ["Python"],
-  github: "https://github.com/nicetea17/Anagame",
-  demo: "https://anagame.streamlit.app/"
 
-},
 {
   name: "Personal Website",
   desc: "Designed and built a responsive personal portfolio website to showcase projects, experiences, and contact information using React.js.",
