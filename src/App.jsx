@@ -176,18 +176,18 @@ function AboutExplorer(){
   </Step>
   <Step>
     <h2 className = "about-title">Technical Strengths</h2>
-    <p>Coding Languages: Python, HTML, CSS, Java, JavaScript <br></br> <hr></hr>
-    Libraries: pandas, numpy, matplotlib, PyTorch, Scikit-learn, React<br></br> <hr></hr>
+    <p>Coding Languages: Python, Java, SQL, HTML, CSS, JavaScript <br></br> <hr></hr>
+    Libraries: PyTorch, TensorFlow, pandas, numpy, matplotlib, plotly, Scikit-learn, React.js, Tableau<br></br> <hr></hr>
     Languages: English, Mandarin, Spanish, Korean </p>
   </Step>
   <Step>
     <h2 className = "about-title">Coursework</h2>
     <p>Some core technical classes I have completed / am currently taking include:</p>
     <ul style = {{textAlign: 'left' }}>
+    <li><b>CS189 </b>- Introduction to Machine Learning</li>
+    <li><b>CS61B </b>- Data Structures and Algorithms</li>
     <li><b>CS61A </b>- The Structure and Interpretation of Computer Programs</li>
     <li><b>CS70 </b>- Discrete Mathematics & Probability Theory</li>
-    <li><b>CS61B </b>- Data Structures and Algorithms</li>
-    <li><b>EECS16A </b>- Foundations of Signals, Dynamical Systems, and Information Processing</li>
     <li><b>Math 54 </b>- Linear Algebra & Differential Equations</li>
     <li><b>Math 53 </b>- Multivariable Calculus</li>
     <li><b>Stat 20 </b>- Introduction to Probability & Statistics</li>
@@ -315,6 +315,7 @@ const projects = [
     name: "Reversing Face Distortion Filters",
     desc: "Built a Pix2Pix-based conditional GAN (U-Net generator + PatchGAN discriminator) to invert synthetic swirl facial distortion filters, exploring filter reversal for digital forensics applications.",
     tags: ["Python", "Pytorch", "Adversarial Networks"],
+    demo: "https://www.canva.com/design/DAG7KFl5HIM/lowjy_P5pq77zj4Oq5VHbQ/view?utm_content=DAG7KFl5HIM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h27a931240c"
   },
   {
     name: "Tweets’ Sentiment Classification",
